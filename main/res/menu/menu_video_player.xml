@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_hw"
+        android:title="@string/action_hw"/>
+    <item android:id="@+id/action_music"
+        android:title="@string/action_music"
+        android:icon="@drawable/ic_music_box_grey600_24dp"/>
+    <item android:id="@+id/action_play"
+        android:title="@string/action_play"/>
+    <item android:id="@+id/action_display"
+        android:title="@string/action_display"/>
+    <item android:id="@+id/action_audio"
+        android:title="@string/action_audio"/>
+    <item android:id="@+id/action_subTitle"
+        android:title="@string/action_subTitle"/>
+    <item android:id="@+id/action_tools"
+        android:title="@string/action_tools"/>
+    <item android:id="@+id/action_help"
+        android:title="@string/action_help"/>
+</menu>
