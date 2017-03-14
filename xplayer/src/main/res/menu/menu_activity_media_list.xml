@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.ActivityMediaList">
+    <item
+        android:id="@+id/menu_update"
+        android:title="@string/menu_update"
+        android:icon="@android:drawable/ic_menu_upload"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_search"
+        android:title="@string/menu_search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_network_stream"
+        android:title="@string/action_network_stream"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_view"
+        android:title="@string/action_view"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_select"
+        android:title="@string/action_select"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_help"
+        android:title="@string/action_help"
+        app:showAsAction="never" />
+</menu>
