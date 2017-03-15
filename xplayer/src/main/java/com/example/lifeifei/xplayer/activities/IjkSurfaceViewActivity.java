@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -58,6 +59,7 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
     private View mMediaControllerBottom;
     private ActionBar mActionBar;
     private ZOOM_STATE mZoomState;
+    private VideoData mVideoData;
 
     private enum ZOOM_STATE{
         STRETCH,
@@ -71,6 +73,7 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
         super.onCreate(savedInstanceState);
         Log.d(TAG,"onCreate");
         mAppImpl = ((AppImpl)getApplicationContext());
+        mVideoData = mAppImpl.getVideoData();
 
         this.setContentView(R.layout.ijksurface_video_screen);
 
@@ -88,7 +91,7 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
     }
 
     private void initView() {
-        mActionBar = getActionBar();
+        initialzeActionBar();
 
         mIjkSurfaceView = (SurfaceView) this.findViewById(R.id.ijkSurfaceView);
         //设置surfaceHolder
@@ -120,6 +123,25 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
         mRotateButton.setOnClickListener(this);
 
         mZoomState = ZOOM_STATE.STRETCH;
+    }
+
+    private void initialzeActionBar() {
+        mActionBar = getActionBar();
+        mActionBar.setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP,ActionBar.DISPLAY_HOME_AS_UP);
+        mActionBar.setDisplayOptions(mActionBar.getDisplayOptions()
+                | ActionBar.DISPLAY_SHOW_TITLE);
+        setActionBarTitle();
+    }
+
+    private void setActionBarTitle() {
+        VideoInfo mCurrentVideo = mVideoData.getVideo(mCurrentVideoIndex);
+        String title;
+        if(mCurrentVideo == null){
+            title = mCurrentVideoPath;
+        }else{
+            title = mCurrentVideo.title;
+        }
+        mActionBar.setTitle(title);
     }
 
     private void playVideo() {
@@ -328,8 +350,7 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
     }
 
     private void playPreVideo() {
-        VideoData mVideoList = mAppImpl.getVideoList();
-        VideoInfo mPreVideoInfo = mVideoList.getPreVideo(mCurrentVideoIndex);
+        VideoInfo mPreVideoInfo = mVideoData.getPreVideo(mCurrentVideoIndex);
         if(mPreVideoInfo == null){
             return;
         }
@@ -337,11 +358,11 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
         mCurrentVideoPath = mPreVideoInfo.filePath;
         mCurrentVideoIndex = mCurrentVideoIndex - 1;
         playVideo();
+        setActionBarTitle();
     }
 
     private void playNextVideo() {
-        VideoData mVideoList = mAppImpl.getVideoList();
-        VideoInfo mNextVideoInfo = mVideoList.getNextVideo(mCurrentVideoIndex);
+        VideoInfo mNextVideoInfo = mVideoData.getNextVideo(mCurrentVideoIndex);
         if(mNextVideoInfo == null){
             return;
         }
@@ -349,6 +370,7 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
         mCurrentVideoPath = mNextVideoInfo.filePath;
         mCurrentVideoIndex = mCurrentVideoIndex + 1;
         playVideo();
+        setActionBarTitle();
     }
 
     private void resumeVideo() {
@@ -357,6 +379,19 @@ public class IjkSurfaceViewActivity extends Activity implements IjkMediaPlayer.O
         mProThread = new ProgressThread();
         mProThread.start();
         isCompleted = false;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Log.e(TAG,"id = " + id);
+        switch (id){
+            case android.R.id.home:
+                finish();
+                break;
+            default:
+        }
+        return true;
     }
 
     private class SurfaceHolderBack implements SurfaceHolder.Callback {

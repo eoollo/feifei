@@ -41,6 +41,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/all32Debug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/all32/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/all32/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/all32/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/all32/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/all32/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/all32/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/assets" type="java-test-resource" />
@@ -48,12 +54,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32Debug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/all32/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/all32/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/all32/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/all32/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/all32/debug" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/all32/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/all32/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/all32/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/all32/assets" type="java-resource" />
@@ -61,13 +61,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/all32/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/all32/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/all32/rs" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/jni" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32/assets" type="java-test-resource" />
@@ -75,6 +68,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAll32/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAll32/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />

@@ -46,6 +46,7 @@ public class ActivityMediaList extends AppCompatActivity implements ListView.OnI
     private VideoAdapter mediaAdapter;
     private PermissionManager mPermissionManager;
     private AppImpl mAppImpl;
+    private VideoData mVideoData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,21 +54,20 @@ public class ActivityMediaList extends AppCompatActivity implements ListView.OnI
         Log.d(TAG,"onCreate...");
         mAppImpl = (AppImpl)getApplication();
         mPermissionManager = new PermissionManager(this);
-        
+
         setContentView(R.layout.activity_media_list);
         mediaListView = (ListView) findViewById(R.id.media_list);
 
         if(mPermissionManager.requestPermissions()){
-
             initView();
         }
     }
 
     public void initView(){
         Log.d(TAG,"initView...");
-        VideoData mVideoData = new VideoData(this);
+        mVideoData = new VideoData(this);
         videoList = mVideoData.getVideoList();
-        mAppImpl.setVideoList(mVideoData);
+        mAppImpl.setVideoData(mVideoData);
 
         //设置ListView的Adapter，使用我们自定义的Adatper
         mediaAdapter = new VideoAdapter(this, videoList);

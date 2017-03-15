@@ -80,4 +80,11 @@ public class VideoData {
         }
         return videoList.get(index - 1);
     }
+
+    public VideoInfo getVideo(int index){
+        if(index == VIDEO_NO_INDEX){
+            return null;
+        }
+        return videoList.get(index);
+    }
 }

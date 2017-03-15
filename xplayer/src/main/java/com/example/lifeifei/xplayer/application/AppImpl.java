@@ -25,11 +25,11 @@ public class AppImpl extends Application{
         Log.d(TAG,"onCreate...");
     }
 
-    public void setVideoList(VideoData videoData){
+    public void setVideoData(VideoData videoData){
         mVideoData = videoData;
     }
 
-    public VideoData getVideoList(){
+    public VideoData getVideoData(){
         return mVideoData;
     }
 }
